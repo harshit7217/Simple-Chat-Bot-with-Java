@@ -26,6 +26,22 @@ public class Main {
         Count count = new Count();
         System.out.print(" > ");
         count.countingZeroToLimit(scanner.nextInt());
+
+//        Quiz
+        System.out.println("Let's test your programming knowledge.");
+        Quiz quiz = new Quiz();
+        while(true){
+            System.out.println(quiz.getQuestions());
+            quiz.printOptions();
+            System.out.print(" > ");
+            int answer = scanner.nextInt();
+            if(answer == quiz.getCorrectAnswer()){
+                break;
+            }
+            System.out.println("Please, try again");
+        }
+
+
         System.out.println("Completed, have a nice day!");
     }
 }
