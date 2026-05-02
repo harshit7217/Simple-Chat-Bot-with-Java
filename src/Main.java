@@ -12,7 +12,7 @@ public class Main {
 //        Introduction and Greeting the user
         System.out.println("Please, Remind me your name.");
         System.out.print(" > ");
-        UserIntroduction userIntroduction = new UserIntroduction(scanner.next());
+        UserIntroduction userIntroduction = new UserIntroduction(scanner.nextLine());
         System.out.println("What a great name you have, "+ userIntroduction.getYourName());
 
 //        Age Guessing
@@ -20,5 +20,12 @@ public class Main {
         System.out.println("Enter remainders od dividing you age by 3, 5 and 7.");
         AgeGuess ageGuess = new AgeGuess(scanner);
         System.out.println("Your age is "+ ageGuess.guessTheAgeOfUser()+ "; that's a good time to start programming!");
+
+//        Print the counting number for the limit
+        System.out.println("Now I will prove to you that I can count any number you want.");
+        Count count = new Count();
+        System.out.print(" > ");
+        count.countingZeroToLimit(scanner.nextInt());
+        System.out.println("Completed, have a nice day!");
     }
 }
